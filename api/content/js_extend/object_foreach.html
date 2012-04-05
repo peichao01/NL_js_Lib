@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Object 静态方法 forEach</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+Object.forEach()
+<span>Object.forEach</span></h2>
+<p class="discription">
+描述：<span class="">对Object的各元素执行一个函数</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>object<span class="pro">:Object</span><span class="dis"></span></dd>
+	<dd>fn<span class="pro">:Function</span><span class="dis">每个元素需要执行的函数</span></dd>
+	<dd>[ thisObj<span class="pro">:Object ]</span><span class="dis">传递内部函数执行时this对象</span></dd>
+</dl>
+<p class="note">
+注：<span></span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+var o = { name:'JOhN',sex:'MaLe'};
+Obejct.forEach(o, function(<span class="prop">key, value, slefObj</span>){
+	alert(key + " : " + value);
+})<span class="note"></span></pre>
+</div>
+</div>
+</body>
+</html>

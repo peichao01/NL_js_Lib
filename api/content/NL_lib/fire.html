@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>NL 方法 fire</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+NL.fire()
+<span></span></h2>
+<p class="discription">
+描述：<span class="">触发事件</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>eventType<span class="pro">:String</span><span class="dis">事件的名字</span></dd><dd>[ fnParams<span class="pro">:Mixin ]</span><span class="dis">执行函数时，传递的参数</span></dd><dd>[ fnScope<span class="pro">:Object ]</span><span class="dis">执行函数时，可以传递作用域内 this 对象</span></dd>
+</dl>
+<p class="note">
+注：<span>fire() 函数在触发事件时，只能传递一个 回调执行时可用的参数，而且是最后一个参数</span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+NL.fire('customEvent', { msg:.. }, scope);</pre>
+</div>
+</div>
+</body>
+</html>

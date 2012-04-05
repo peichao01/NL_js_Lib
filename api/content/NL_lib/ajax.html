@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>NL 方法 ajax</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+NL.ajax()
+<span></span></h2>
+<p class="discription">
+描述：<span class="">Ajax </span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>method<span class="pro">:GET || POST</span><span class="dis"></span></dd><dd>url<span class="pro">:String</span><span class="dis"></span></dd><dd>callback<span class="pro">:Function</span><span class="dis">回调函数</span></dd><dd>data<span class="pro">:Object</span><span class="dis">发送到后台的参数</span></dd>
+</dl>
+<p class="note">
+注：<span>http://varnow.org/?p=77 //参考来源</span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+NL.ajax('get','deal.php',function(text,xml){
+    //this == xhr
+},{
+    user:'goluffy',
+    pwd:'xxx'
+});</pre>
+</div>
+</div>
+</body>
+</html>

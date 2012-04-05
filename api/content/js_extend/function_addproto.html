@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Function 实例方法 addProto</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+.addProto()
+<span>Function.prototype.addProto</span></h2>
+<p class="discription">
+描述：<span class="">为 函数||类 添加原型</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>prototypes<span class="pro">:Object</span><span class="dis">添加原型方法/属性的键值对形式</span></dd>
+</dl>
+<p class="note">
+注：<span>与 .method() 方法类似</span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+function Person(name) {
+    this.name = name;
+}
+Person.addProto({
+    say: function () {
+        alert("I'm " + this.name);
+    }
+});
+
+var p = new Person('John');
+p.say();</pre>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Function 实例方法 method</title>
+	<link type="text/css" rel="stylesheet" href="../css/content.css" />
+</head>
+<body>
+<form action="tpl.php" method="post">
+<input type="submit" value="生产文件" style="margin:10px;">
+页面标题描述：<input name="title" type="text">
+文件目录：<input type="text" name="path">
+文件名：<input type="text" name="filename">.html
+<div id="body">
+<h2 class="title">
+使用：<input type="text" name="method" />
+<span>继承关系：<input type="text" name="inherit"></span></h2>
+<p class="discription">
+描述：<span class=""><input type="text" name="description"></span>
+</p>
+<dl class="property">
+	<dt>参数：</dt><input id="addPro" type="button" value="增加参数">
+	<input type="hidden" value="0" name="proNum" id="proNum" >
+</dl>
+<p class="note">
+注意事项：<input type="text" name="note" >
+</p>
+<p class="return">
+返回值：<input type="text" name="return" >
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+<textarea name="eg" style="height:200px; width:500px;"></textarea></pre>
+</div>
+</div>
+</form>
+<script>
+var addPro = document.getElementById('addPro')
+	proNumInput = document.getElementById('proNum'),proNum=0;
+addPro.onclick = function(){
+	var pa = addPro.parentNode;
+	var pro = document.createElement('dd');
+		pro.innerHTML = '形参名字：<input type="text" name="pro_name_'+proNum+'">'+
+						'<span class="pro">形参类型：<input type="text" name="pro_type_'+proNum+'"></span>'+
+						'<span class="dis">参数描述：<input type="text" name="pro_des_'+proNum+'"></span>';
+	pa.appendChild(pro);
+	proNum++;
+	proNumInput.value = proNum;
+}
+</script>
+</body>
+</html>

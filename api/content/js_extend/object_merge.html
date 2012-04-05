@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Object 静态方法 merge</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+Object.merge()
+<span>Object.merge</span></h2>
+<p class="discription">
+描述：<span class="">合并对象，把source的属性都传递给接受的对象并返回</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>destination<span class="pro">:Object</span><span class="dis">接受属性的对象</span></dd><dd>source<span class="pro">:Object</span><span class="dis">输出属性的对象</span></dd><dd>[ isOverride<span class="pro">:Boolean ]</span><span class="dis">接受者已经有了同名属性时，是否覆盖</span></dd>
+</dl>
+<p class="note">
+注：<span></span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+var User = {
+    Main: function (name) {
+        this.name = name;
+    },
+    say: function () {
+        alert(this.name + ' said: Hello!');
+    }
+}
+
+Object.merge(User, {age:20});
+
+var bob = Object.construct(User,'John');
+alert(bob.age);//输出：20</pre>
+</div>
+</div>
+</body>
+</html>

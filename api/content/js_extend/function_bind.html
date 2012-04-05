@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Function 实例方法 bind</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+.bind()
+<span>Function.prototype.bind</span></h2>
+<p class="discription">
+描述：<span class="">为函数绑定 this 对象 ||version Mozilla 实现版</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>thisObj
+		<span class="pro">:Object</span>
+		<span class="dis">需要绑定的 函数的 this指向</span>
+	</dd>
+</dl>
+<p class="return">
+返回值：一个新的函数
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+var o = {
+	sayThis: function () {
+		alert(this);
+	}
+}
+o.sayThis();<span class="note">//输出：[object Object]--o</span>
+var say = o.sayThis;
+say();<span class="note">//输出：[object DOMWindow]--window</span>
+var say2 = say.bind(o);
+say2();<span class="note">//输出：[object Object]--o</span></pre>
+</div>
+</div>
+</body>
+</html>

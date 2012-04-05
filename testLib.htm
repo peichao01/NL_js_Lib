@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>test Library</title>
+    <script src="NL_latest.js"></script>
+    <script src="NL_sizzle.js"></script>
+    <!--<script src="jquery-1.7.1.js"></script>-->
+    <style>
+        *{ margin:0; padding:0;}
+        #a{ position:absolute; width:1000px; height:1000px;}
+    </style>
+</head>
+<body>
+<div id="a"></div>
+<script>
+    var fn = function (arg, index) {
+        var radian = NL.utils.angleToRadian(arg);
+        var x = arg*10, y = Math.sin(radian)*500;
+
+        NL('#a').append('<span>(' + x + ',' + y + ')</span>', true).setStyle({ position: 'absolute', left: x + 'px', top: (500 - y) + 'px' });
+    };
+
+    //fn.clear();
+    //fn.clear
+
+    var args = [];
+    for (var i = 0; i < 20; i++) {
+        args.push('haha' + i);
+    };
+    var arr = getFramesValue(6, 5000, 0, 90);
+    NL.exec(fn, 30, arr, 100, '');
+
+    /*NL.exec(function () {
+
+    }, 50, [{}], 100);*/
+
+    function getFramesValue(FPS, duration, startNum, endNum) {
+        startNum = startNum === undefined ? 0 :startNum;
+        endNum = endNum === undefined ? 90 : endNum;
+        var len = FPS * duration / 1000;
+        var distant = (endNum-startNum) / len;
+        var arr = [];
+        for (var i = 1; i <= len; i++) {
+            arr.push(i * distant + startNum);
+        }
+        return arr;
+    }
+
+    NL.console.log(arr);
+    function aa() {
+
+    }
+    //var el = '#333';
+    var el = 'rgb(1,1,1)';
+    //NL.console.log((/rgb\(\d+,\d+,\d+\)/g).test(el) || (/#\d{3}/g).test(el));
+    NL.console.log((/[rgb\(\d+,\d+,\d+\)]/g).test(el) || (/#\d{3}/g).test(el));
+    //NL.console.log(parseFloat('01.2px'));
+
+    //alert(NL.utils.radianToAngle(2 * Math.PI));
+    //alert(Math.sin(NL.utils.angleToRadian(90)));
+
+</script>
+</body>
+</html>

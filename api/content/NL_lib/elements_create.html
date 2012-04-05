@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>NL.elements 方法 create</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+NL.elements.create()
+<span></span></h2>
+<p class="discription">
+描述：<span class="">创建节点</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>TagOrHtml<span class="pro">:String </span><span class="dis">1. 含有'<..>'的，认为是HTML字符串; 2. 其余的，认为是 tag 标签名</span></dd>
+</dl>
+<p class="note">
+注：<span>类似 Object.construct，但此方法的参数是 Function 而非 Object</span>
+</p>
+<p class="return">
+返回值：Element || Array[ EL, EL... ]
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+//e.g.
+create('div');
+create('&lt;div>content&lt;/div>');
+NL('&lt;div>..&lt;/div>') 是一个简化版的 create
+
+</pre>
+</div>
+</div>
+</body>
+</html>

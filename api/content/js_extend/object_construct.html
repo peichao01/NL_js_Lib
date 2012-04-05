@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Object 静态方法 construct</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+Object.construct()
+<span>Object.construct</span></h2>
+<p class="discription">
+描述：<span class="">创建一个新的对象，把参数作为原型，且，若参数原型中含有 Main 函数，即先初始化 再返回</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>proto <span class="pro">:Object</span><span class="dis">新对象的原型，且先初始化（若有 Main 函数）</span></dd><dd>[ Main_para<span class="pro">:Mixin ]</span><span class="dis">Main 函数 所需要的参数</span></dd>
+</dl>
+<p class="note">
+注：<span></span>
+</p>
+<p class="return">
+返回值：new Object
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+var User = {
+    Main: function (name) {
+        this.name = name;
+    },
+    say: function () {
+        alert(this.name + ' said: Hello!');
+    }
+}
+
+var bob = Object.construct(User,'John');
+bob.say();//输出： John said: Hello</pre>
+</div>
+</div>
+</body>
+</html>

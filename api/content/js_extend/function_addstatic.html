@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Function 实例方法 addstatic</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+.addstatic()
+<span>Function.prototype.addstatic</span></h2>
+<p class="discription">
+描述：<span class="">为 函数||类 添加静态方法 || 类方法 ||属性  Fn.fn();</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	
+</dl>
+<p class="note">
+注：<span></span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+<span class="note">//两种形式</span>
+1. function.addStaticFn('eat', fn);
+2. function.addStaticFn({ eat: fn, sleep: fn2 });
+
+function Person(){}
+Person.addStatic({
+    EYES:2,
+    walk: function(){
+        //....
+    }
+});
+alert(Person.EYES);//输出：2</pre>
+</div>
+</div>
+</body>
+</html>

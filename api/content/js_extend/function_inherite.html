@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Function 实例方法 inherite</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+.inherite()
+<span>Function.prototype.inherite</span></h2>
+<p class="discription">
+描述：<span class="">继承自其它构造器</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>Class<span class="pro">:Function</span><span class="dis">需要继承的父类构造函数</span></dd>
+</dl>
+<p class="note">
+注：<span>很显然，只有类的 实例方法 能被继承。</span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+function Animal() { }
+Animal.method('run',function () {
+    alert('用脚奔跑');
+});
+
+function Person(name) {
+    this.name = name;
+}
+<span class="note">//一定要在添加原型方法之前继承，否则，原型方法会被抹掉</span>
+<span class="prop">Person.inherite(Animal);</span>
+
+Person.addProto({
+    say: function () {
+        alert("I'm " + this.name);
+    }
+});
+
+var p = new Person('John');
+p.say();//输出：I'm John
+p.run(); //输出：用脚奔跑</pre>
+</div>
+</div>
+</body>
+</html>

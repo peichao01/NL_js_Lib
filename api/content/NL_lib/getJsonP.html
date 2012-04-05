@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>NL 方法 getJsonP</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+NL.getJsonP()
+<span></span></h2>
+<p class="discription">
+描述：<span class="">JSONP的方式（而非ajax）获取后台数据</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>url<span class="pro">:String </span><span class="dis">所需脚本的URL</span></dd><dd>fn<span class="pro">:Function</span><span class="dis">回调函数</span></dd>
+</dl>
+<p class="note">
+注：<span></span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+/*
+* @ server code: PHP: 
+*       $script = $_GET['callback'];
+*       .......//the content of the Script 
+*   at last: 
+*       echo $script.'('.sth.')';
+*/
+NL.getJsonP('testLib.php', function () {
+    //<head>内就多了一条js文件..如：
+    //<script src="testLib.php?callback=NL.cache.getScript['1327993521798']" type="text/javascript"></script>
+    //并且，js文件内的数据已可用
+    var bob = Object.construct(person,'john');
+    bob.walk();
+});
+
+//php
+
+&lt;?php
+
+$script = $_GET['callback'];
+
+$sth = <<&lt;STH
+	
+	var person = {
+		Main: function(name){
+			this.name = name;
+		},
+		walk: function(){
+			alert(this.name+" can walk!");
+		}
+	}
+	
+STH;
+echo $sth;
+echo $script.'()';
+
+?&gt;</pre>
+</div>
+</div>
+</body>
+</html>

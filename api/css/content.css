@@ -1,0 +1,27 @@
+*{ margin:0; padding:0;}
+li { list-style:none;}
+.hide { display:none;}
+.show { display:block;}
+
+#body { padding:10px; background-color:#333;}
+
+.title,.discription,.property,.eg,.return,.note {background-color:#fff; padding:5px 10px; margin-bottom:10px;}
+.title { font-size:20px; }
+.title span { color:#666; font-size:12px; font-weight:normal;}
+.discription { }
+.discription  span{ color:#666;}
+.property {}
+.property dd{ padding-left:10px; margin:3px 0;}
+.property .pro { padding-left:5px; color:#666;}
+.dis { padding-left:10px; font-size:14px; color:#333;}
+
+pre .note { background-color:transparent;}
+
+.note { color:#666;}
+.note span {font-size:12px;}
+
+.eg {}
+.eg pre { background-color:#fbf9ea; border:1px solid #e2e1d5; padding:5px 10px; color:#333; line-height:20px;}
+.eg pre .note { color:#080;}
+.eg pre .prop { color:#606;}
+.return span { color:#333;}

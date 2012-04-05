@@ -1,0 +1,21 @@
+*{ margin:0; padding:0;}
+li { list-style:none;}
+.hide { display:none;}
+.show { display:block;}
+
+body { padding:10px; background-color:#333;}
+.title{font-size:20px; text-align:center; margin-bottom:20px;color:#fff;}
+
+.out{margin-bottom:20px; background-color:#f9f9f9; padding:10px;}
+
+h2 {font-size:16px; margin-bottom:5px;}
+
+.js_extend,.NL_lib{border:1px dotted #ccc; float:left; padding:5px; margin-right:10px;}
+h3 {font-size:14px;color:#5e9430;}
+ul,dl { float:left; border-right:1px dotted #3885d3; padding:0 10px;}
+ul.last,dl.last {padding-right:0;border:0;}
+dt {font-weight:bold;color:#3f92e7;font-size:14px;}
+a {color:#13439b;text-decoration:none;font-size:12px;}
+dd:hover,li:hover {background-color:#daf2dd;}
+
+a .tip{color:#a7dc7a;}

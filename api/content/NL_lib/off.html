@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>NL 方法 off</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+NL.off()
+<span></span></h2>
+<p class="discription">
+描述：<span class="">移除事件的方法( DOM && non-DOM )</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>ID<span class="pro">:Array</span><span class="dis"></span></dd><dd>[ removeAll<span class="pro">:Boolean ]</span><span class="dis">是否全部移除，只适用于 non-DOM 事件</span></dd>
+</dl>
+<p class="note">
+注：<span>类似PHP的文件操作,fopen()返回一个资源句柄，fclose()函数把句柄传进来即可</span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+NL.off(ID);
+
+var ID1 = NL.on('fuck', function (voice, v2, v3) {
+    alert(voice);
+    NL.off(ID1);//执行一次，即删除
+}, 'n~~~', 'aaa~~~');
+
+var ID2 = NL('#id').on('click', function(e){
+    NL.off(ID2);
+})</pre>
+</div>
+</div>
+</body>
+</html>

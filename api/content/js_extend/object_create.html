@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Object 静态方法 create</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+Object.create()
+<span>Object.create</span></h2>
+<p class="discription">
+描述：<span class="">创建一个新的对象，并把参数作为新对象的原型</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>proto<span class="pro">:Object</span><span class="dis">新对象的原型</span></dd>
+</dl>
+<p class="note">
+注：<span>不完全实现，详见ECMAScript5 的 Object.create 方法</span>
+</p>
+<p class="return">
+返回值：
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+//用对象字面量 比用构造函数创建“类”，对象更方便
+var User = {
+    say: function () {
+        alert('said: Hello!');
+    }
+}
+
+var bob = Object.create(User);
+bob.say();</pre>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Function 实例方法 method</title>
+	<link type="text/css" rel="stylesheet" href="../../css/content.css" />
+</head>
+<body>
+<div id="body">
+<h2 class="title">
+.method()
+<span>Function.prototype.method</span></h2>
+<p class="discription">
+描述：<span class="">为 函数 添加原型方法</span>
+</p>
+<dl class="property">
+	<dt>参数：</dt>
+	<dd>fnName
+		<span class="pro">:String</span>
+		<span class="dis">方法的名字</span>
+	</dd>
+	<dd>fn
+		<span class="pro">:Function</span>
+		<span class="dis">方法函数本身</span>
+	</dd>
+</dl>
+<p class="return">
+返回值：原函数自身
+</p>
+<div class="eg">
+	<p>举例：</p>
+	<pre class="code">
+function Person(name) {
+	this.name = name;
+}
+Person.method('say', function () {
+	alert("I'm " + this.name);
+});
+
+var p = new Person('John');
+p.say();<span class="note">//输出：I'm John</span></pre>
+</div>
+</div>
+</body>
+</html>
